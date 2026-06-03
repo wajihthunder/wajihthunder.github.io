@@ -3,6 +3,1232 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outscales - AI Receptionist for DFW HVAC Companies</title>
+  <meta name="description" content="Outscales gives Dallas-Fort Worth HVAC businesses a 24/7 AI receptionist that answers every call, books every job, and never lets revenue slip through the cracks. English & Spanish." />
+  <meta property="og:title" content="Outscales - Never Miss a Call. Never Lose a Job." />
+  <meta property="og:description" content="The AI receptionist built exclusively for DFW HVAC businesses. Every call answered. Every job captured. 24/7." />
+  <meta property="og:url" content="https://outscales.com" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #29ABE2;
+      --blue-dark: #1A8BBF;
+      --blue-deep: #0F6B96;
+      --ink: #0A0F1E;
+      --ink-soft: #1E293B;
+      --ink-muted: #4A5568;
+      --surface: #F8FAFC;
+      --surface-card: #FFFFFF;
+      --border: #E2EBF0;
+      --border-strong: #C8D8E4;
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+      --font-ui: 'Inter', sans-serif;
+      --max-w: 1120px;
+      --radius: 12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--surface);
+      color: var(--ink-soft);
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(248, 250, 252, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      height: 72px;
+      display: flex;
+      align-items: center;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 32px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-mark {
+      height: 36px;
+      width: auto;
+    }
+    .nav-logo-text {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: 0.18em;
+      color: var(--ink);
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-ui);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink-muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .btn-nav {
+      background: var(--blue);
+      color: #fff;
+      font-family: var(--font-ui);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 10px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-nav:hover { background: var(--blue-dark); transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 160px 32px 120px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(41, 171, 226, 0.07);
+      border: 1px solid rgba(41, 171, 226, 0.22);
+      color: var(--blue-deep);
+      font-size: 11px;
+      font-weight: 600;
+      font-family: var(--font-ui);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 6.5vw, 84px);
+      font-weight: 900;
+      line-height: 1.0;
+      color: var(--ink);
+      letter-spacing: 0.01em;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--blue);
+    }
+    .hero-sub {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--ink-muted);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 460px;
+      font-family: var(--font-body);
+    }
+    .section-sub {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--ink-muted);
+      margin-top: 16px;
+      max-width: 560px;
+      line-height: 1.75;
+      font-family: var(--font-body);
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 15px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      display: inline-block;
+      letter-spacing: 0.04em;
+    }
+    .btn-primary:hover {
+      background: var(--blue-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(41, 171, 226, 0.28);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 15px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1.5px solid var(--border-strong);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+      letter-spacing: 0.04em;
+    }
+    .btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
+
+    /* hero visual - call simulation */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .call-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      width: 100%;
+      max-width: 360px;
+      position: relative;
+      box-shadow: 0 4px 40px rgba(10, 15, 30, 0.06);
+    }
+    .call-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .call-avatar {
+      width: 44px; height: 44px;
+      background: rgba(41, 171, 226, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--blue);
+    }
+    .call-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--ink);
+    }
+    .call-sub { font-size: 12px; color: var(--ink-muted); }
+    .call-status {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #16A34A;
+      margin-left: auto;
+    }
+    .call-status-dot {
+      width: 7px; height: 7px;
+      background: #16A34A;
+      border-radius: 50%;
+    }
+    .call-messages { display: flex; flex-direction: column; gap: 12px; }
+    .msg {
+      padding: 11px 15px;
+      border-radius: 12px;
+      font-size: 13.5px;
+      line-height: 1.5;
+      max-width: 85%;
+      animation: fadeUp 0.4s ease both;
+    }
+    .msg-ai {
+      background: rgba(41, 171, 226, 0.1);
+      color: var(--ink);
+      border-bottom-left-radius: 4px;
+      align-self: flex-start;
+    }
+    .msg-caller {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--ink-soft);
+      border-bottom-right-radius: 4px;
+      align-self: flex-end;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .msg:nth-child(1) { animation-delay: 0.1s; }
+    .msg:nth-child(2) { animation-delay: 0.5s; }
+    .msg:nth-child(3) { animation-delay: 0.9s; }
+    .msg:nth-child(4) { animation-delay: 1.3s; }
+    .call-footer {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .call-time { font-size: 12px; color: var(--ink-muted); }
+    .call-booked {
+      background: rgba(22, 163, 74, 0.1);
+      color: #15803D;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 100px;
+      border: 1px solid rgba(22, 163, 74, 0.2);
+    }
+    .badge-lang {
+      position: absolute;
+      top: -14px; right: 20px;
+      background: var(--ink);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 5px 14px;
+      border-radius: 100px;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      margin-top: 48px;
+    }
+    .hero-stat {
+      display: flex;
+      flex-direction: column;
+    }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .hero-stat-num span { color: var(--blue); }
+    .hero-stat-label {
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-top: 4px;
+    }
+    .hero-stat-divider {
+      width: 1px;
+      background: var(--border-strong);
+      align-self: stretch;
+    }
+
+    /* ── PAIN STRIP ── */
+    .pain-strip {
+      background: var(--ink);
+      padding: 64px 32px;
+      text-align: center;
+    }
+    .pain-strip p {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 2.8vw, 28px);
+      font-weight: 800;
+      color: #fff;
+      max-width: 780px;
+      margin: 0 auto;
+      line-height: 1.3;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .pain-strip p em {
+      font-style: normal;
+      color: var(--blue);
+    }
+    .pain-strip-sub {
+      font-family: var(--font-body) !important;
+      font-size: 14px !important;
+      font-weight: 400 !important;
+      color: rgba(255,255,255,0.45) !important;
+      margin-top: 12px !important;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 120px 32px; }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      font-family: var(--font-ui);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 900;
+      color: var(--ink);
+      line-height: 1.05;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+
+    /* ── BRIDGE / TRANSFORMATION ── */
+    .bridge-section { background: #fff; }
+    .bridge-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0;
+      margin-top: 72px;
+      align-items: stretch;
+    }
+    .bridge-col {
+      padding: 40px 36px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    .bridge-col-before {
+      background: var(--surface);
+    }
+    .bridge-col-after {
+      background: rgba(41, 171, 226, 0.04);
+      border-color: rgba(41, 171, 226, 0.3);
+    }
+    .bridge-col-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .before-label { color: var(--ink-muted); }
+    .after-label { color: var(--blue); }
+    .bridge-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+    .bridge-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .bridge-icon-x { color: #EF4444; }
+    .bridge-icon-check { color: #16A34A; }
+    .bridge-connector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      gap: 10px;
+    }
+    .bridge-arrow-line {
+      width: 2px;
+      flex: 1;
+      background: linear-gradient(to bottom, transparent, var(--blue), transparent);
+    }
+    .bridge-logo-mid {
+      width: 52px; height: 52px;
+      background: var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 72px;
+    }
+    .how-card {
+      padding: 36px 32px;
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      position: relative;
+    }
+    .how-num {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 800;
+      color: rgba(41, 171, 226, 0.12);
+      line-height: 1;
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+    }
+    .how-card h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .how-card p { font-size: 15px; color: var(--ink-muted); line-height: 1.65; }
+
+    /* ── CAPABILITIES ── */
+    .capabilities-section { background: #fff; }
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      margin-top: 64px;
+      background: var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .cap-item {
+      background: #fff;
+      padding: 40px 36px;
+      transition: background 0.2s;
+    }
+    .cap-item:hover { background: var(--surface); }
+    .cap-accent {
+      width: 40px;
+      height: 3px;
+      background: var(--blue);
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .cap-item h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .cap-item p { font-size: 15px; color: var(--ink-muted); line-height: 1.65; }
+
+    /* ── LANGUAGE SECTION ── */
+    .lang-section {
+      background: var(--ink);
+      padding: 100px 32px;
+    }
+    .lang-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .lang-content .section-label { color: rgba(255,255,255,0.4); }
+    .lang-content .section-title { color: #fff; }
+    .lang-content .section-sub { color: rgba(255,255,255,0.55); max-width: 440px; }
+    .lang-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .lang-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .lang-flag {
+      font-size: 32px;
+      line-height: 1;
+    }
+    .lang-card-text {}
+    .lang-card-name {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .lang-card-desc { font-size: 13px; color: rgba(255,255,255,0.45); }
+
+    /* ── DFW SECTION ── */
+    .dfw-section { background: var(--surface); }
+    .dfw-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-top: 0;
+      align-items: center;
+    }
+    .dfw-cities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+    .dfw-city {
+      background: #fff;
+      border: 1px solid var(--border);
+      color: var(--ink-soft);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 16px;
+      border-radius: 100px;
+      letter-spacing: 0.02em;
+    }
+    .dfw-visual {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .dfw-stat-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .dfw-stat-row:last-child { border-bottom: none; }
+    .dfw-stat-label { font-size: 14px; color: var(--ink-muted); }
+    .dfw-stat-val {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .dfw-stat-val span { color: var(--blue); }
+
+    /* ── FINAL CTA ── */
+    .cta-section {
+      background: var(--blue);
+      padding: 120px 32px;
+      text-align: center;
+    }
+    .cta-inner { max-width: 700px; margin: 0 auto; }
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4.5vw, 56px);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.05;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .cta-section p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 40px;
+      line-height: 1.65;
+    }
+    .btn-white {
+      background: #fff;
+      color: var(--blue-deep);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(10, 15, 30, 0.15);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      padding: 72px 32px 48px;
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      text-decoration: none;
+    }
+    .footer-logo-text {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.18em;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    .footer-brand p {
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+      max-width: 260px;
+    }
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .footer-col ul li a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom {
+      padding-top: 32px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-legal {
+      font-size: 12px;
+      color: rgba(255,255,255,0.25);
+      line-height: 1.7;
+      max-width: 680px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+    .footer-links a {
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ── MOBILE NAV ── */
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: all 0.25s;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; gap: 60px; padding: 130px 24px 80px; }
+      .hero-visual { justify-content: flex-start; }
+      .bridge-grid { grid-template-columns: 1fr; }
+      .bridge-connector { flex-direction: row; padding: 16px 0; }
+      .bridge-arrow-line { width: auto; height: 2px; flex: 1; background: linear-gradient(to right, transparent, var(--blue), transparent); }
+      .how-grid { grid-template-columns: 1fr; }
+      .cap-grid { grid-template-columns: 1fr; }
+      .lang-inner { grid-template-columns: 1fr; gap: 48px; }
+      .dfw-grid { grid-template-columns: 1fr; gap: 48px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .nav-links, .btn-nav { display: none; }
+      .nav-hamburger { display: flex; }
+      section { padding: 80px 24px; }
+    }
+    @media (max-width: 600px) {
+      .footer-top { grid-template-columns: 1fr; }
+      .hero-stats { gap: 16px; }
+      .footer-bottom { flex-direction: column; }
+    }
+
+    /* scroll fade-in */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Outscales Home">
+        <img src="OUTSCALES_LOGO_3.png" alt="Outscales" class="nav-logo-mark" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn-nav">Book a Demo</a>
+      <button class="nav-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="padding:0;">
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-label">
+          Exclusively serving Dallas-Fort Worth HVAC
+        </div>
+        <h1>Never Miss a Call.<br /><em>Never Lose a Job.</em></h1>
+        <p class="hero-sub">
+          While you're on the roof or under the unit, Outscales keeps your front desk open. Every call answered, every job booked - in English and Spanish - 24 hours a day.
+        </p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn-primary">Book a Free Demo</a>
+          <a href="services.html" class="btn-ghost">See How It Works</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span>1 in 3</span></div>
+            <div class="hero-stat-label">HVAC calls go unanswered</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span>24/7</span></div>
+            <div class="hero-stat-label">Coverage, zero days off</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span>2</span></div>
+            <div class="hero-stat-label">Languages. English & Spanish</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call simulation -->
+      <div class="hero-visual">
+        <div class="call-card">
+          <div class="badge-lang">Live Call - 2:14 AM</div>
+          <div class="call-card-header">
+            <div class="call-avatar">OS</div>
+            <div>
+              <div class="call-name">Outscales Receptionist</div>
+              <div class="call-sub">Your business - always open</div>
+            </div>
+            <div class="call-status">
+              <div class="call-status-dot"></div>
+              Active
+            </div>
+          </div>
+          <div class="call-messages">
+            <div class="msg msg-ai">
+              Thank you for calling! How can I help you today?
+            </div>
+            <div class="msg msg-caller">
+              My AC stopped working, it's 102° outside. I need someone out today.
+            </div>
+            <div class="msg msg-ai">
+              Absolutely - let's get a technician out to you right away. Can I get your address and best number to reach you?
+            </div>
+            <div class="msg msg-caller">
+              4821 Maple Ave, Dallas…
+            </div>
+          </div>
+          <div class="call-footer">
+            <div class="call-time">Call duration: 1:42</div>
+            <div class="call-booked">✓ Job Booked</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN STRIP -->
+  <div class="pain-strip">
+    <p>Every unanswered call in DFW is a <em>$400–$800 job</em> handed directly to your competitor.</p>
+    <p class="pain-strip-sub">The average HVAC company misses 1 in 3 inbound calls. That's not a phone problem - it's a revenue problem.</p>
+  </div>
+
+  <!-- BRIDGE / TRANSFORMATION -->
+  <section class="bridge-section">
+    <div class="section-inner">
+      <div class="reveal">
+        <span class="section-label">The Outscales difference</span>
+        <h2 class="section-title">From where you are<br />to where you need to be.</h2>
+        <p class="section-sub">Most HVAC owners don't have a business problem. They have a capacity problem. Outscales removes the ceiling.</p>
+      </div>
+      <div class="bridge-grid reveal">
+        <div class="bridge-col bridge-col-before">
+          <span class="bridge-col-label before-label">Without Outscales</span>
+          <div class="bridge-item">
+            <svg class="bridge-icon bridge-icon-x" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Calls go to voicemail after hours - callers hang up and call someone else
+          </div>
+          <div class="bridge-item">
+            <svg class="bridge-icon bridge-icon-x" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Spanish-speaking customers can't communicate - leads lost immediately
+          </div>
+          <div class="bridge-item">
+            <svg class="bridge-icon bridge-icon-x" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            You're interrupted mid-job to answer calls you could be billing for
+          </div>
+          <div class="bridge-item">
+            <svg class="bridge-icon bridge-icon-x" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Emergency calls at 2am go unanswered - high-value jobs lost to a competitor
+          </div>
+          <div class="bridge-item">
+            <svg class="bridge-icon bridge-icon-x" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Hiring a receptionist costs $35,000+ per year before benefits
+          </div>
+        </div>
+
+        <div class="bridge-connector">
+          <div class="bridge-arrow-line"></div>
+          <div class="bridge-logo-mid">
+            <svg viewBox="0 0 28 28" fill="none" width="24" height="24">
+              <circle cx="14" cy="14" r="12" stroke="#fff" stroke-width="1.8"/>
+              <circle cx="14" cy="14" r="6.5" stroke="#fff" stroke-width="1.8"/>
+              <circle cx="14" cy="14" r="2.5" fill="#fff"/>
+              <line x1="14" y1="16.5" x2="14" y2="20" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="bridge-arrow-line"></div>
+        </div>
+
+        <div class="bridge-col bridge-col-after">
+          <span class="bridge-col-label after-label">With Outscales</span>
+          <div class="bridge-item">
+            <svg class="bridge-icon bridge-icon-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Every call answered on the first ring - at 2pm or 2am, 365 days a year
+          </div>
+          <div class="bridge-item">
+            <svg class="bridge-icon bridge-icon-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Fluent English and Spanish - every DFW customer feels heard
+          </div>
+          <div class="bridge-item">
+            <svg class="bridge-icon bridge-icon-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            You stay focused on the job - the AI handles the front desk
+          </div>
+          <div class="bridge-item">
+            <svg class="bridge-icon bridge-icon-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Emergency calls routed and booked instantly - premium jobs captured
+          </div>
+          <div class="bridge-item">
+            <svg class="bridge-icon bridge-icon-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            A fraction of the cost of a receptionist - zero HR, zero sick days
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <div class="section-inner">
+      <div class="reveal">
+        <span class="section-label">How it works</span>
+        <h2 class="section-title">Up and running<br />in under 24 hours.</h2>
+        <p class="section-sub">No technical setup on your end. No learning curve. We handle everything - you just start receiving more jobs.</p>
+      </div>
+      <div class="how-grid reveal">
+        <div class="how-card">
+          <div class="how-num">01</div>
+          <h3>We learn your business</h3>
+          <p>We map your services, service area, pricing, and how you handle calls. Your AI receptionist is trained to represent your business - not a generic script.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-num">02</div>
+          <h3>Your calls forward to us</h3>
+          <p>One simple call-forwarding change. When your phone rings and you can't answer, Outscales picks up instantly - in your business name, in your voice.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-num">03</div>
+          <h3>Jobs get captured. You grow.</h3>
+          <p>Every call logged, every appointment confirmed. You get a clear report of every interaction - so you know exactly what was booked, what needs follow-up, and what revenue was captured while you were working.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section class="capabilities-section">
+    <div class="section-inner">
+      <div class="reveal">
+        <span class="section-label">What Outscales does</span>
+        <h2 class="section-title">Built for how HVAC<br />businesses actually operate.</h2>
+      </div>
+      <div class="cap-grid reveal">
+        <div class="cap-item">
+          <div class="cap-accent"></div>
+          <h3>24/7 Call Answering</h3>
+          <p>Your phone is answered on the first ring - midnight, weekends, holidays. No voicemail. No missed emergencies. No lost revenue.</p>
+        </div>
+        <div class="cap-item">
+          <div class="cap-accent"></div>
+          <h3>Appointment Booking</h3>
+          <p>Callers don't just leave a message - they get scheduled. The AI collects job details, confirms availability, and books the appointment in real time.</p>
+        </div>
+        <div class="cap-item">
+          <div class="cap-accent"></div>
+          <h3>Emergency Call Detection</h3>
+          <p>The system recognizes urgency - "no AC in 100-degree heat" gets treated differently than a routine tune-up inquiry. Critical jobs get escalated immediately.</p>
+        </div>
+        <div class="cap-item">
+          <div class="cap-accent"></div>
+          <h3>Lead Qualification</h3>
+          <p>Not every call is a job. Outscales filters, qualifies, and logs every interaction - so your time goes to real opportunities, not wasted time.</p>
+        </div>
+        <div class="cap-item">
+          <div class="cap-accent"></div>
+          <h3>Call Summaries & Logs</h3>
+          <p>Every call documented. Every detail captured. You wake up to a clean summary of every interaction that happened overnight - so nothing slips through.</p>
+        </div>
+        <div class="cap-item">
+          <div class="cap-accent"></div>
+          <h3>Bilingual Coverage</h3>
+          <p>DFW's HVAC market is bilingual. Outscales handles every call in the caller's language - English or Spanish - without hesitation and without an accent barrier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGE -->
+  <section class="lang-section">
+    <div class="lang-inner">
+      <div class="lang-content">
+        <span class="section-label">Bilingual by design</span>
+        <h2 class="section-title" style="color:#fff;">DFW speaks two languages.<br />So does Outscales.</h2>
+        <p class="section-sub">Over 40% of the Dallas-Fort Worth metro is Spanish-speaking. Every unanswered Spanish call isn't a language barrier - it's a missed job. Outscales closes that gap completely.</p>
+      </div>
+      <div class="lang-cards">
+        <div class="lang-card">
+          <div class="lang-flag">🇺🇸</div>
+          <div class="lang-card-text">
+            <div class="lang-card-name">English</div>
+            <div class="lang-card-desc">Natural, professional, and trained on HVAC terminology specific to the DFW market.</div>
+          </div>
+        </div>
+        <div class="lang-card">
+          <div class="lang-flag">🇲🇽</div>
+          <div class="lang-card-text">
+            <div class="lang-card-name">Español</div>
+            <div class="lang-card-desc">Fluent, confident Spanish - so every caller in your market feels taken care of from the first word.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DFW FOCUS -->
+  <section class="dfw-section">
+    <div class="section-inner">
+      <div class="dfw-grid">
+        <div class="reveal">
+          <span class="section-label">Built for DFW</span>
+          <h2 class="section-title">We don't serve everyone.<br />We serve you.</h2>
+          <p class="section-sub" style="margin-top:16px;">Outscales operates exclusively in the Dallas-Fort Worth metroplex. That means every system we build, every script we train, and every capability we develop is tailored to DFW HVAC - your market, your customers, your climate.</p>
+          <div class="dfw-cities">
+            <span class="dfw-city">Dallas</span>
+            <span class="dfw-city">Fort Worth</span>
+            <span class="dfw-city">Plano</span>
+            <span class="dfw-city">Frisco</span>
+            <span class="dfw-city">Arlington</span>
+            <span class="dfw-city">McKinney</span>
+            <span class="dfw-city">Irving</span>
+            <span class="dfw-city">Garland</span>
+            <span class="dfw-city">Denton</span>
+            <span class="dfw-city">Allen</span>
+            <span class="dfw-city">Carrollton</span>
+            <span class="dfw-city">Mesquite</span>
+          </div>
+        </div>
+        <div class="dfw-visual reveal">
+          <div style="font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px;">DFW HVAC Market Reality</div>
+          <div class="dfw-stat-row">
+            <span class="dfw-stat-label">Avg. HVAC job value in DFW</span>
+            <span class="dfw-stat-val"><span>$520</span></span>
+          </div>
+          <div class="dfw-stat-row">
+            <span class="dfw-stat-label">Calls missed per day (avg. co.)</span>
+            <span class="dfw-stat-val"><span>4–7</span></span>
+          </div>
+          <div class="dfw-stat-row">
+            <span class="dfw-stat-label">Annual revenue lost to missed calls</span>
+            <span class="dfw-stat-val"><span>$75K+</span></span>
+          </div>
+          <div class="dfw-stat-row">
+            <span class="dfw-stat-label">DFW population speaks Spanish</span>
+            <span class="dfw-stat-val"><span>40%+</span></span>
+          </div>
+          <div class="dfw-stat-row">
+            <span class="dfw-stat-label">Days above 95°F in DFW per year</span>
+            <span class="dfw-stat-val"><span>100+</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section">
+    <div class="cta-inner reveal">
+      <h2>Your next missed call is your competitor's next job.</h2>
+      <p>Book a free demo and see exactly what Outscales does for your business - no commitment, no technical setup, no pressure.</p>
+      <a href="contact.html" class="btn-white">Book Your Free Demo →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="footer-brand-logo">
+            <img src="OUTSCALES_LOGO_1.png" alt="Outscales" style="height:40px;width:auto;" />
+          </a>
+          <p>The AI receptionist built exclusively for Dallas-Fort Worth HVAC companies. Every call answered. Every job captured.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:wajih@outscales.com">wajih@outscales.com</a></li>
+            <li><a href="tel:+14692695880">+1 (469) 269-5880</a></li>
+            <li><a href="#">Dallas-Fort Worth, TX</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-legal">
+          © 2026 Outscales. All rights reserved. Outscales provides AI-powered receptionist services exclusively to HVAC businesses in the Dallas-Fort Worth metropolitan area.<br />
+          By contacting us through this site, you agree to our <a href="terms.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Terms of Service</a> and <a href="privacy.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Privacy Policy</a>. SMS opt-in data and consent are never shared with third parties.
+        </p>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+
+    // Stagger children of reveal containers
+    document.querySelectorAll('.how-grid .how-card, .cap-grid .cap-item').forEach((el, i) => {
+      el.style.transitionDelay = `${i * 0.08}s`;
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+
+    // Nav scroll effect
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.style.boxShadow = window.scrollY > 20 ? '0 2px 24px rgba(10,15,30,0.06)' : 'none';
+    });
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy | Outscales</title>
   <meta name="description" content="Outscales Privacy Policy. How we collect, use, and protect your personal information, including SMS messaging data." />
   <meta property="og:title" content="Privacy Policy | Outscales" />
@@ -1788,1231 +3014,6 @@
       const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
       reveals.forEach(el => obs.observe(el));
     }
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Outscales - AI Receptionist for DFW HVAC Companies</title>
-  <meta name="description" content="Outscales gives Dallas-Fort Worth HVAC businesses a 24/7 AI receptionist that answers every call, books every job, and never lets revenue slip through the cracks. English & Spanish." />
-  <meta property="og:title" content="Outscales - Never Miss a Call. Never Lose a Job." />
-  <meta property="og:description" content="The AI receptionist built exclusively for DFW HVAC businesses. Every call answered. Every job captured. 24/7." />
-  <meta property="og:url" content="https://outscales.com" />
-  <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --blue: #29ABE2;
-      --blue-dark: #1A8BBF;
-      --blue-deep: #0F6B96;
-      --ink: #0A0F1E;
-      --ink-soft: #1E293B;
-      --ink-muted: #4A5568;
-      --surface: #F8FAFC;
-      --surface-card: #FFFFFF;
-      --border: #E2EBF0;
-      --border-strong: #C8D8E4;
-      --font-display: 'Barlow Condensed', sans-serif;
-      --font-body: 'Barlow', sans-serif;
-      --font-ui: 'Inter', sans-serif;
-      --max-w: 1120px;
-      --radius: 12px;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--font-body);
-      background: var(--surface);
-      color: var(--ink-soft);
-      font-size: 17px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: rgba(248, 250, 252, 0.92);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-      height: 72px;
-      display: flex;
-      align-items: center;
-    }
-    .nav-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 32px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-    .nav-logo-mark {
-      height: 36px;
-      width: auto;
-    }
-    .nav-logo-text {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 20px;
-      letter-spacing: 0.18em;
-      color: var(--ink);
-      text-transform: uppercase;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 36px;
-      list-style: none;
-    }
-    .nav-links a {
-      font-family: var(--font-ui);
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--ink-muted);
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--ink); }
-    .btn-nav {
-      background: var(--blue);
-      color: #fff;
-      font-family: var(--font-ui);
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      padding: 10px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-      display: inline-block;
-    }
-    .btn-nav:hover { background: var(--blue-dark); transform: translateY(-1px); }
-
-    /* ── HERO ── */
-    .hero {
-      padding: 160px 32px 120px;
-      max-width: var(--max-w);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-    .hero-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(41, 171, 226, 0.07);
-      border: 1px solid rgba(41, 171, 226, 0.22);
-      color: var(--blue-deep);
-      font-size: 11px;
-      font-weight: 600;
-      font-family: var(--font-ui);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 7px 16px;
-      border-radius: 100px;
-      margin-bottom: 28px;
-    }
-    .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(52px, 6.5vw, 84px);
-      font-weight: 900;
-      line-height: 1.0;
-      color: var(--ink);
-      letter-spacing: 0.01em;
-      margin-bottom: 24px;
-      text-transform: uppercase;
-    }
-    .hero h1 em {
-      font-style: normal;
-      color: var(--blue);
-    }
-    .hero-sub {
-      font-size: 17px;
-      font-weight: 400;
-      color: var(--ink-muted);
-      line-height: 1.7;
-      margin-bottom: 40px;
-      max-width: 460px;
-      font-family: var(--font-body);
-    }
-    .section-sub {
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--ink-muted);
-      margin-top: 16px;
-      max-width: 560px;
-      line-height: 1.75;
-      font-family: var(--font-body);
-    }
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .btn-primary {
-      background: var(--blue);
-      color: #fff;
-      font-family: var(--font-ui);
-      font-size: 14px;
-      font-weight: 600;
-      padding: 15px 32px;
-      border-radius: 10px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      display: inline-block;
-      letter-spacing: 0.04em;
-    }
-    .btn-primary:hover {
-      background: var(--blue-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(41, 171, 226, 0.28);
-    }
-    .btn-ghost {
-      background: transparent;
-      color: var(--ink);
-      font-family: var(--font-ui);
-      font-size: 14px;
-      font-weight: 500;
-      padding: 15px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      border: 1.5px solid var(--border-strong);
-      cursor: pointer;
-      transition: border-color 0.2s, color 0.2s;
-      display: inline-block;
-      letter-spacing: 0.04em;
-    }
-    .btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
-
-    /* hero visual - call simulation */
-    .hero-visual {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .call-card {
-      background: var(--surface-card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px;
-      width: 100%;
-      max-width: 360px;
-      position: relative;
-      box-shadow: 0 4px 40px rgba(10, 15, 30, 0.06);
-    }
-    .call-card-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 24px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border);
-    }
-    .call-avatar {
-      width: 44px; height: 44px;
-      background: rgba(41, 171, 226, 0.12);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 16px;
-      color: var(--blue);
-    }
-    .call-name {
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: 15px;
-      color: var(--ink);
-    }
-    .call-sub { font-size: 12px; color: var(--ink-muted); }
-    .call-status {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      color: #16A34A;
-      margin-left: auto;
-    }
-    .call-status-dot {
-      width: 7px; height: 7px;
-      background: #16A34A;
-      border-radius: 50%;
-    }
-    .call-messages { display: flex; flex-direction: column; gap: 12px; }
-    .msg {
-      padding: 11px 15px;
-      border-radius: 12px;
-      font-size: 13.5px;
-      line-height: 1.5;
-      max-width: 85%;
-      animation: fadeUp 0.4s ease both;
-    }
-    .msg-ai {
-      background: rgba(41, 171, 226, 0.1);
-      color: var(--ink);
-      border-bottom-left-radius: 4px;
-      align-self: flex-start;
-    }
-    .msg-caller {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--ink-soft);
-      border-bottom-right-radius: 4px;
-      align-self: flex-end;
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .msg:nth-child(1) { animation-delay: 0.1s; }
-    .msg:nth-child(2) { animation-delay: 0.5s; }
-    .msg:nth-child(3) { animation-delay: 0.9s; }
-    .msg:nth-child(4) { animation-delay: 1.3s; }
-    .call-footer {
-      margin-top: 20px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .call-time { font-size: 12px; color: var(--ink-muted); }
-    .call-booked {
-      background: rgba(22, 163, 74, 0.1);
-      color: #15803D;
-      font-size: 12px;
-      font-weight: 600;
-      padding: 5px 12px;
-      border-radius: 100px;
-      border: 1px solid rgba(22, 163, 74, 0.2);
-    }
-    .badge-lang {
-      position: absolute;
-      top: -14px; right: 20px;
-      background: var(--ink);
-      color: #fff;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      padding: 5px 14px;
-      border-radius: 100px;
-    }
-    .hero-stats {
-      display: flex;
-      gap: 28px;
-      margin-top: 48px;
-    }
-    .hero-stat {
-      display: flex;
-      flex-direction: column;
-    }
-    .hero-stat-num {
-      font-family: var(--font-display);
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--ink);
-      line-height: 1;
-    }
-    .hero-stat-num span { color: var(--blue); }
-    .hero-stat-label {
-      font-size: 12px;
-      color: var(--ink-muted);
-      margin-top: 4px;
-    }
-    .hero-stat-divider {
-      width: 1px;
-      background: var(--border-strong);
-      align-self: stretch;
-    }
-
-    /* ── PAIN STRIP ── */
-    .pain-strip {
-      background: var(--ink);
-      padding: 64px 32px;
-      text-align: center;
-    }
-    .pain-strip p {
-      font-family: var(--font-display);
-      font-size: clamp(20px, 2.8vw, 28px);
-      font-weight: 800;
-      color: #fff;
-      max-width: 780px;
-      margin: 0 auto;
-      line-height: 1.3;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-    }
-    .pain-strip p em {
-      font-style: normal;
-      color: var(--blue);
-    }
-    .pain-strip-sub {
-      font-family: var(--font-body) !important;
-      font-size: 14px !important;
-      font-weight: 400 !important;
-      color: rgba(255,255,255,0.45) !important;
-      margin-top: 12px !important;
-      letter-spacing: 0.04em;
-    }
-
-    /* ── SECTION SHARED ── */
-    section { padding: 120px 32px; }
-    .section-inner { max-width: var(--max-w); margin: 0 auto; }
-    .section-label {
-      font-size: 11px;
-      font-weight: 700;
-      font-family: var(--font-ui);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 16px;
-      display: block;
-    }
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(32px, 4vw, 52px);
-      font-weight: 900;
-      color: var(--ink);
-      line-height: 1.05;
-      letter-spacing: 0.01em;
-      text-transform: uppercase;
-    }
-
-    /* ── BRIDGE / TRANSFORMATION ── */
-    .bridge-section { background: #fff; }
-    .bridge-grid {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 0;
-      margin-top: 72px;
-      align-items: stretch;
-    }
-    .bridge-col {
-      padding: 40px 36px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-    }
-    .bridge-col-before {
-      background: var(--surface);
-    }
-    .bridge-col-after {
-      background: rgba(41, 171, 226, 0.04);
-      border-color: rgba(41, 171, 226, 0.3);
-    }
-    .bridge-col-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      display: block;
-    }
-    .before-label { color: var(--ink-muted); }
-    .after-label { color: var(--blue); }
-    .bridge-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 16px;
-      font-size: 15px;
-      color: var(--ink-soft);
-      line-height: 1.5;
-    }
-    .bridge-icon {
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .bridge-icon-x { color: #EF4444; }
-    .bridge-icon-check { color: #16A34A; }
-    .bridge-connector {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 0 24px;
-      gap: 10px;
-    }
-    .bridge-arrow-line {
-      width: 2px;
-      flex: 1;
-      background: linear-gradient(to bottom, transparent, var(--blue), transparent);
-    }
-    .bridge-logo-mid {
-      width: 52px; height: 52px;
-      background: var(--blue);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    /* ── HOW IT WORKS ── */
-    .how-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      margin-top: 72px;
-    }
-    .how-card {
-      padding: 36px 32px;
-      background: var(--surface-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      position: relative;
-    }
-    .how-num {
-      font-family: var(--font-display);
-      font-size: 56px;
-      font-weight: 800;
-      color: rgba(41, 171, 226, 0.12);
-      line-height: 1;
-      margin-bottom: 20px;
-      letter-spacing: -0.03em;
-    }
-    .how-card h3 {
-      font-family: var(--font-display);
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--ink);
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-    }
-    .how-card p { font-size: 15px; color: var(--ink-muted); line-height: 1.65; }
-
-    /* ── CAPABILITIES ── */
-    .capabilities-section { background: #fff; }
-    .cap-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
-      margin-top: 64px;
-      background: var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-    .cap-item {
-      background: #fff;
-      padding: 40px 36px;
-      transition: background 0.2s;
-    }
-    .cap-item:hover { background: var(--surface); }
-    .cap-accent {
-      width: 40px;
-      height: 3px;
-      background: var(--blue);
-      border-radius: 2px;
-      margin-bottom: 20px;
-    }
-    .cap-item h3 {
-      font-family: var(--font-display);
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--ink);
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-    }
-    .cap-item p { font-size: 15px; color: var(--ink-muted); line-height: 1.65; }
-
-    /* ── LANGUAGE SECTION ── */
-    .lang-section {
-      background: var(--ink);
-      padding: 100px 32px;
-    }
-    .lang-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-    .lang-content .section-label { color: rgba(255,255,255,0.4); }
-    .lang-content .section-title { color: #fff; }
-    .lang-content .section-sub { color: rgba(255,255,255,0.55); max-width: 440px; }
-    .lang-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .lang-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius);
-      padding: 24px 28px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .lang-flag {
-      font-size: 32px;
-      line-height: 1;
-    }
-    .lang-card-text {}
-    .lang-card-name {
-      font-family: var(--font-display);
-      font-size: 16px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 4px;
-    }
-    .lang-card-desc { font-size: 13px; color: rgba(255,255,255,0.45); }
-
-    /* ── DFW SECTION ── */
-    .dfw-section { background: var(--surface); }
-    .dfw-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      margin-top: 0;
-      align-items: center;
-    }
-    .dfw-cities {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 32px;
-    }
-    .dfw-city {
-      background: #fff;
-      border: 1px solid var(--border);
-      color: var(--ink-soft);
-      font-size: 13px;
-      font-weight: 500;
-      padding: 7px 16px;
-      border-radius: 100px;
-      letter-spacing: 0.02em;
-    }
-    .dfw-visual {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .dfw-stat-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .dfw-stat-row:last-child { border-bottom: none; }
-    .dfw-stat-label { font-size: 14px; color: var(--ink-muted); }
-    .dfw-stat-val {
-      font-family: var(--font-display);
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--ink);
-    }
-    .dfw-stat-val span { color: var(--blue); }
-
-    /* ── FINAL CTA ── */
-    .cta-section {
-      background: var(--blue);
-      padding: 120px 32px;
-      text-align: center;
-    }
-    .cta-inner { max-width: 700px; margin: 0 auto; }
-    .cta-section h2 {
-      font-family: var(--font-display);
-      font-size: clamp(32px, 4.5vw, 56px);
-      font-weight: 900;
-      color: #fff;
-      line-height: 1.05;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .cta-section p {
-      font-size: 17px;
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 40px;
-      line-height: 1.65;
-    }
-    .btn-white {
-      background: #fff;
-      color: var(--blue-deep);
-      font-family: var(--font-body);
-      font-size: 15px;
-      font-weight: 700;
-      padding: 16px 36px;
-      border-radius: 10px;
-      text-decoration: none;
-      display: inline-block;
-      transition: transform 0.15s, box-shadow 0.2s;
-    }
-    .btn-white:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(10, 15, 30, 0.15);
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--ink);
-      padding: 72px 32px 48px;
-    }
-    .footer-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-    }
-    .footer-top {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr 1fr;
-      gap: 48px;
-      padding-bottom: 56px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .footer-brand-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 16px;
-      text-decoration: none;
-    }
-    .footer-logo-text {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 18px;
-      letter-spacing: 0.18em;
-      color: #fff;
-      text-transform: uppercase;
-    }
-    .footer-brand p {
-      font-size: 13.5px;
-      color: rgba(255,255,255,0.4);
-      line-height: 1.7;
-      max-width: 260px;
-    }
-    .footer-col h4 {
-      font-family: var(--font-display);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-      margin-bottom: 20px;
-    }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .footer-col ul li a {
-      font-size: 14px;
-      color: rgba(255,255,255,0.6);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer-col ul li a:hover { color: #fff; }
-    .footer-bottom {
-      padding-top: 32px;
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    .footer-legal {
-      font-size: 12px;
-      color: rgba(255,255,255,0.25);
-      line-height: 1.7;
-      max-width: 680px;
-    }
-    .footer-links {
-      display: flex;
-      gap: 20px;
-      flex-shrink: 0;
-    }
-    .footer-links a {
-      font-size: 12px;
-      color: rgba(255,255,255,0.35);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: rgba(255,255,255,0.7); }
-
-    /* ── MOBILE NAV ── */
-    .nav-hamburger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-      flex-direction: column;
-      gap: 5px;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 22px; height: 2px;
-      background: var(--ink);
-      border-radius: 2px;
-      transition: all 0.25s;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; gap: 60px; padding: 130px 24px 80px; }
-      .hero-visual { justify-content: flex-start; }
-      .bridge-grid { grid-template-columns: 1fr; }
-      .bridge-connector { flex-direction: row; padding: 16px 0; }
-      .bridge-arrow-line { width: auto; height: 2px; flex: 1; background: linear-gradient(to right, transparent, var(--blue), transparent); }
-      .how-grid { grid-template-columns: 1fr; }
-      .cap-grid { grid-template-columns: 1fr; }
-      .lang-inner { grid-template-columns: 1fr; gap: 48px; }
-      .dfw-grid { grid-template-columns: 1fr; gap: 48px; }
-      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
-      .nav-links, .btn-nav { display: none; }
-      .nav-hamburger { display: flex; }
-      section { padding: 80px 24px; }
-    }
-    @media (max-width: 600px) {
-      .footer-top { grid-template-columns: 1fr; }
-      .hero-stats { gap: 16px; }
-      .footer-bottom { flex-direction: column; }
-    }
-
-    /* scroll fade-in */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: none;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- NAV -->
-  <nav>
-    <div class="nav-inner">
-      <a href="/" class="nav-logo" aria-label="Outscales Home">
-        <img src="OUTSCALES_LOGO_3.png" alt="Outscales" class="nav-logo-mark" />
-      </a>
-      <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <a href="contact.html" class="btn-nav">Book a Demo</a>
-      <button class="nav-hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section style="padding:0;">
-    <div class="hero">
-      <div class="hero-content">
-        <div class="hero-label">
-          Exclusively serving Dallas-Fort Worth HVAC
-        </div>
-        <h1>Never Miss a Call.<br /><em>Never Lose a Job.</em></h1>
-        <p class="hero-sub">
-          While you're on the roof or under the unit, Outscales keeps your front desk open. Every call answered, every job booked - in English and Spanish - 24 hours a day.
-        </p>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn-primary">Book a Free Demo</a>
-          <a href="services.html" class="btn-ghost">See How It Works</a>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-num"><span>1 in 3</span></div>
-            <div class="hero-stat-label">HVAC calls go unanswered</div>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat">
-            <div class="hero-stat-num"><span>24/7</span></div>
-            <div class="hero-stat-label">Coverage, zero days off</div>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat">
-            <div class="hero-stat-num"><span>2</span></div>
-            <div class="hero-stat-label">Languages. English & Spanish</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Call simulation -->
-      <div class="hero-visual">
-        <div class="call-card">
-          <div class="badge-lang">Live Call - 2:14 AM</div>
-          <div class="call-card-header">
-            <div class="call-avatar">OS</div>
-            <div>
-              <div class="call-name">Outscales Receptionist</div>
-              <div class="call-sub">Your business - always open</div>
-            </div>
-            <div class="call-status">
-              <div class="call-status-dot"></div>
-              Active
-            </div>
-          </div>
-          <div class="call-messages">
-            <div class="msg msg-ai">
-              Thank you for calling! How can I help you today?
-            </div>
-            <div class="msg msg-caller">
-              My AC stopped working, it's 102° outside. I need someone out today.
-            </div>
-            <div class="msg msg-ai">
-              Absolutely - let's get a technician out to you right away. Can I get your address and best number to reach you?
-            </div>
-            <div class="msg msg-caller">
-              4821 Maple Ave, Dallas…
-            </div>
-          </div>
-          <div class="call-footer">
-            <div class="call-time">Call duration: 1:42</div>
-            <div class="call-booked">✓ Job Booked</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PAIN STRIP -->
-  <div class="pain-strip">
-    <p>Every unanswered call in DFW is a <em>$400–$800 job</em> handed directly to your competitor.</p>
-    <p class="pain-strip-sub">The average HVAC company misses 1 in 3 inbound calls. That's not a phone problem - it's a revenue problem.</p>
-  </div>
-
-  <!-- BRIDGE / TRANSFORMATION -->
-  <section class="bridge-section">
-    <div class="section-inner">
-      <div class="reveal">
-        <span class="section-label">The Outscales difference</span>
-        <h2 class="section-title">From where you are<br />to where you need to be.</h2>
-        <p class="section-sub">Most HVAC owners don't have a business problem. They have a capacity problem. Outscales removes the ceiling.</p>
-      </div>
-      <div class="bridge-grid reveal">
-        <div class="bridge-col bridge-col-before">
-          <span class="bridge-col-label before-label">Without Outscales</span>
-          <div class="bridge-item">
-            <svg class="bridge-icon bridge-icon-x" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            Calls go to voicemail after hours - callers hang up and call someone else
-          </div>
-          <div class="bridge-item">
-            <svg class="bridge-icon bridge-icon-x" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            Spanish-speaking customers can't communicate - leads lost immediately
-          </div>
-          <div class="bridge-item">
-            <svg class="bridge-icon bridge-icon-x" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            You're interrupted mid-job to answer calls you could be billing for
-          </div>
-          <div class="bridge-item">
-            <svg class="bridge-icon bridge-icon-x" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            Emergency calls at 2am go unanswered - high-value jobs lost to a competitor
-          </div>
-          <div class="bridge-item">
-            <svg class="bridge-icon bridge-icon-x" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M7 7l6 6M13 7l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            Hiring a receptionist costs $35,000+ per year before benefits
-          </div>
-        </div>
-
-        <div class="bridge-connector">
-          <div class="bridge-arrow-line"></div>
-          <div class="bridge-logo-mid">
-            <svg viewBox="0 0 28 28" fill="none" width="24" height="24">
-              <circle cx="14" cy="14" r="12" stroke="#fff" stroke-width="1.8"/>
-              <circle cx="14" cy="14" r="6.5" stroke="#fff" stroke-width="1.8"/>
-              <circle cx="14" cy="14" r="2.5" fill="#fff"/>
-              <line x1="14" y1="16.5" x2="14" y2="20" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="bridge-arrow-line"></div>
-        </div>
-
-        <div class="bridge-col bridge-col-after">
-          <span class="bridge-col-label after-label">With Outscales</span>
-          <div class="bridge-item">
-            <svg class="bridge-icon bridge-icon-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Every call answered on the first ring - at 2pm or 2am, 365 days a year
-          </div>
-          <div class="bridge-item">
-            <svg class="bridge-icon bridge-icon-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Fluent English and Spanish - every DFW customer feels heard
-          </div>
-          <div class="bridge-item">
-            <svg class="bridge-icon bridge-icon-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            You stay focused on the job - the AI handles the front desk
-          </div>
-          <div class="bridge-item">
-            <svg class="bridge-icon bridge-icon-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Emergency calls routed and booked instantly - premium jobs captured
-          </div>
-          <div class="bridge-item">
-            <svg class="bridge-icon bridge-icon-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            A fraction of the cost of a receptionist - zero HR, zero sick days
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section>
-    <div class="section-inner">
-      <div class="reveal">
-        <span class="section-label">How it works</span>
-        <h2 class="section-title">Up and running<br />in under 24 hours.</h2>
-        <p class="section-sub">No technical setup on your end. No learning curve. We handle everything - you just start receiving more jobs.</p>
-      </div>
-      <div class="how-grid reveal">
-        <div class="how-card">
-          <div class="how-num">01</div>
-          <h3>We learn your business</h3>
-          <p>We map your services, service area, pricing, and how you handle calls. Your AI receptionist is trained to represent your business - not a generic script.</p>
-        </div>
-        <div class="how-card">
-          <div class="how-num">02</div>
-          <h3>Your calls forward to us</h3>
-          <p>One simple call-forwarding change. When your phone rings and you can't answer, Outscales picks up instantly - in your business name, in your voice.</p>
-        </div>
-        <div class="how-card">
-          <div class="how-num">03</div>
-          <h3>Jobs get captured. You grow.</h3>
-          <p>Every call logged, every appointment confirmed. You get a clear report of every interaction - so you know exactly what was booked, what needs follow-up, and what revenue was captured while you were working.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CAPABILITIES -->
-  <section class="capabilities-section">
-    <div class="section-inner">
-      <div class="reveal">
-        <span class="section-label">What Outscales does</span>
-        <h2 class="section-title">Built for how HVAC<br />businesses actually operate.</h2>
-      </div>
-      <div class="cap-grid reveal">
-        <div class="cap-item">
-          <div class="cap-accent"></div>
-          <h3>24/7 Call Answering</h3>
-          <p>Your phone is answered on the first ring - midnight, weekends, holidays. No voicemail. No missed emergencies. No lost revenue.</p>
-        </div>
-        <div class="cap-item">
-          <div class="cap-accent"></div>
-          <h3>Appointment Booking</h3>
-          <p>Callers don't just leave a message - they get scheduled. The AI collects job details, confirms availability, and books the appointment in real time.</p>
-        </div>
-        <div class="cap-item">
-          <div class="cap-accent"></div>
-          <h3>Emergency Call Detection</h3>
-          <p>The system recognizes urgency - "no AC in 100-degree heat" gets treated differently than a routine tune-up inquiry. Critical jobs get escalated immediately.</p>
-        </div>
-        <div class="cap-item">
-          <div class="cap-accent"></div>
-          <h3>Lead Qualification</h3>
-          <p>Not every call is a job. Outscales filters, qualifies, and logs every interaction - so your time goes to real opportunities, not wasted time.</p>
-        </div>
-        <div class="cap-item">
-          <div class="cap-accent"></div>
-          <h3>Call Summaries & Logs</h3>
-          <p>Every call documented. Every detail captured. You wake up to a clean summary of every interaction that happened overnight - so nothing slips through.</p>
-        </div>
-        <div class="cap-item">
-          <div class="cap-accent"></div>
-          <h3>Bilingual Coverage</h3>
-          <p>DFW's HVAC market is bilingual. Outscales handles every call in the caller's language - English or Spanish - without hesitation and without an accent barrier.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LANGUAGE -->
-  <section class="lang-section">
-    <div class="lang-inner">
-      <div class="lang-content">
-        <span class="section-label">Bilingual by design</span>
-        <h2 class="section-title" style="color:#fff;">DFW speaks two languages.<br />So does Outscales.</h2>
-        <p class="section-sub">Over 40% of the Dallas-Fort Worth metro is Spanish-speaking. Every unanswered Spanish call isn't a language barrier - it's a missed job. Outscales closes that gap completely.</p>
-      </div>
-      <div class="lang-cards">
-        <div class="lang-card">
-          <div class="lang-flag">🇺🇸</div>
-          <div class="lang-card-text">
-            <div class="lang-card-name">English</div>
-            <div class="lang-card-desc">Natural, professional, and trained on HVAC terminology specific to the DFW market.</div>
-          </div>
-        </div>
-        <div class="lang-card">
-          <div class="lang-flag">🇲🇽</div>
-          <div class="lang-card-text">
-            <div class="lang-card-name">Español</div>
-            <div class="lang-card-desc">Fluent, confident Spanish - so every caller in your market feels taken care of from the first word.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DFW FOCUS -->
-  <section class="dfw-section">
-    <div class="section-inner">
-      <div class="dfw-grid">
-        <div class="reveal">
-          <span class="section-label">Built for DFW</span>
-          <h2 class="section-title">We don't serve everyone.<br />We serve you.</h2>
-          <p class="section-sub" style="margin-top:16px;">Outscales operates exclusively in the Dallas-Fort Worth metroplex. That means every system we build, every script we train, and every capability we develop is tailored to DFW HVAC - your market, your customers, your climate.</p>
-          <div class="dfw-cities">
-            <span class="dfw-city">Dallas</span>
-            <span class="dfw-city">Fort Worth</span>
-            <span class="dfw-city">Plano</span>
-            <span class="dfw-city">Frisco</span>
-            <span class="dfw-city">Arlington</span>
-            <span class="dfw-city">McKinney</span>
-            <span class="dfw-city">Irving</span>
-            <span class="dfw-city">Garland</span>
-            <span class="dfw-city">Denton</span>
-            <span class="dfw-city">Allen</span>
-            <span class="dfw-city">Carrollton</span>
-            <span class="dfw-city">Mesquite</span>
-          </div>
-        </div>
-        <div class="dfw-visual reveal">
-          <div style="font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px;">DFW HVAC Market Reality</div>
-          <div class="dfw-stat-row">
-            <span class="dfw-stat-label">Avg. HVAC job value in DFW</span>
-            <span class="dfw-stat-val"><span>$520</span></span>
-          </div>
-          <div class="dfw-stat-row">
-            <span class="dfw-stat-label">Calls missed per day (avg. co.)</span>
-            <span class="dfw-stat-val"><span>4–7</span></span>
-          </div>
-          <div class="dfw-stat-row">
-            <span class="dfw-stat-label">Annual revenue lost to missed calls</span>
-            <span class="dfw-stat-val"><span>$75K+</span></span>
-          </div>
-          <div class="dfw-stat-row">
-            <span class="dfw-stat-label">DFW population speaks Spanish</span>
-            <span class="dfw-stat-val"><span>40%+</span></span>
-          </div>
-          <div class="dfw-stat-row">
-            <span class="dfw-stat-label">Days above 95°F in DFW per year</span>
-            <span class="dfw-stat-val"><span>100+</span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="cta-section">
-    <div class="cta-inner reveal">
-      <h2>Your next missed call is your competitor's next job.</h2>
-      <p>Book a free demo and see exactly what Outscales does for your business - no commitment, no technical setup, no pressure.</p>
-      <a href="contact.html" class="btn-white">Book Your Free Demo →</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="/" class="footer-brand-logo">
-            <img src="OUTSCALES_LOGO_1.png" alt="Outscales" style="height:40px;width:auto;" />
-          </a>
-          <p>The AI receptionist built exclusively for Dallas-Fort Worth HVAC companies. Every call answered. Every job captured.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:wajih@outscales.com">wajih@outscales.com</a></li>
-            <li><a href="tel:+14692695880">+1 (469) 269-5880</a></li>
-            <li><a href="#">Dallas-Fort Worth, TX</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-legal">
-          © 2026 Outscales. All rights reserved. Outscales provides AI-powered receptionist services exclusively to HVAC businesses in the Dallas-Fort Worth metropolitan area.<br />
-          By contacting us through this site, you agree to our <a href="terms.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Terms of Service</a> and <a href="privacy.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Privacy Policy</a>. SMS opt-in data and consent are never shared with third parties.
-        </p>
-        <div class="footer-links">
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => observer.observe(el));
-
-    // Stagger children of reveal containers
-    document.querySelectorAll('.how-grid .how-card, .cap-grid .cap-item').forEach((el, i) => {
-      el.style.transitionDelay = `${i * 0.08}s`;
-      el.classList.add('reveal');
-      observer.observe(el);
-    });
-
-    // Nav scroll effect
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-      nav.style.boxShadow = window.scrollY > 20 ? '0 2px 24px rgba(10,15,30,0.06)' : 'none';
-    });
   </script>
 </body>
 </html>

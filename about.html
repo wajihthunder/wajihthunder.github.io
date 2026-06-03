@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Outscales | AI Receptionist for DFW HVAC</title>
+  <meta name="description" content="Outscales was built for one market: Dallas-Fort Worth HVAC businesses. Learn why we focus exclusively on DFW and what that means for your revenue." />
+  <meta property="og:title" content="About Outscales | Built for DFW HVAC" />
+  <meta property="og:url" content="https://outscales.com/about.html" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://outscales.com/about.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #29ABE2; --blue-dark: #1A8BBF; --blue-deep: #0F6B96;
+      --ink: #0A0F1E; --ink-soft: #1E293B; --ink-muted: #4A5568;
+      --surface: #F8FAFC; --surface-card: #FFFFFF;
+      --border: #E2EBF0;
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+      --font-ui: 'Inter', sans-serif;
+      --max-w: 1120px; --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--surface); color: var(--ink-soft); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    .section-label { font-size: 11px; font-weight: 700; font-family: var(--font-ui); letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; display: block; }
+    .section-title { font-family: var(--font-display); font-size: clamp(32px,4vw,52px); font-weight: 900; color: var(--ink); line-height: 1.05; letter-spacing: 0.01em; text-transform: uppercase; }
+    .section-sub { font-size: 16px; color: var(--ink-muted); margin-top: 16px; max-width: 560px; line-height: 1.75; }
+    .btn-primary { background: var(--blue); color: #fff; font-family: var(--font-ui); font-size: 14px; font-weight: 600; padding: 15px 32px; border-radius: 10px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; display: inline-block; letter-spacing: 0.04em; }
+    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--ink); font-family: var(--font-ui); font-size: 14px; font-weight: 600; padding: 15px 32px; border-radius: 10px; text-decoration: none; border: 1.5px solid var(--border); cursor: pointer; transition: border-color 0.2s, transform 0.15s; display: inline-block; letter-spacing: 0.04em; }
+    .btn-ghost:hover { border-color: var(--ink); transform: translateY(-2px); }
+    .btn-white { background: #fff; color: var(--blue-deep); font-family: var(--font-body); font-size: 15px; font-weight: 700; padding: 16px 36px; border-radius: 10px; text-decoration: none; display: inline-block; transition: transform 0.15s, box-shadow 0.2s; }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(10,15,30,0.15); }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    footer { background: var(--ink); padding: 72px 32px 48px; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .footer-brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; text-decoration: none; }
+    .footer-logo-text { font-family: var(--font-display); font-weight: 800; font-size: 18px; letter-spacing: 0.18em; color: #fff; text-transform: uppercase; }
+    .footer-brand p { font-size: 13.5px; color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 260px; }
+    .footer-col h4 { font-family: var(--font-display); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 20px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .footer-col ul li a, .footer-col ul li { font-size: 14px; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { padding-top: 32px; display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-legal { font-size: 12px; color: rgba(255,255,255,0.25); line-height: 1.7; max-width: 680px; }
+    .footer-links { display: flex; gap: 20px; flex-shrink: 0; }
+    .footer-links a { font-size: 12px; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    @media (max-width: 900px) {
+      .nav-links, .btn-nav { display: none; }
+      .nav-hamburger { display: flex; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+    @media (max-width: 600px) {
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; }
+    }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(248,250,252,0.95); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); height: 72px; display: flex; align-items: center; }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 32px; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-text { font-family: var(--font-display); font-weight: 800; font-size: 20px; letter-spacing: 0.18em; color: var(--ink); text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { font-family: var(--font-ui); font-size: 13px; font-weight: 500; color: var(--ink-muted); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+    .btn-nav { background: var(--blue); color: #fff; font-family: var(--font-ui); font-size: 13px; font-weight: 600; letter-spacing: 0.04em; padding: 10px 22px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s; display: inline-block; }
+    .btn-nav:hover { background: var(--blue-dark); }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--surface-card); z-index: 200; padding: 88px 32px 48px; flex-direction: column; gap: 8px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--font-display); font-size: 28px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink); text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .mobile-menu-close { position: absolute; top: 20px; right: 24px; background: none; border: none; cursor: pointer; font-size: 28px; color: var(--ink); line-height: 1; padding: 8px; }
+    .mobile-menu .mobile-cta { background: var(--blue); color: #fff; border-radius: 10px; text-align: center; font-size: 16px; border-bottom: none; }
+
+    section { padding: 120px 32px; }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+
+    .page-hero { padding: 160px 32px 80px; background: #fff; }
+    .page-hero-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(48px,6vw,76px); font-weight: 900; line-height: 1.0; color: var(--ink); letter-spacing: 0.01em; text-transform: uppercase; margin-bottom: 24px; }
+    .page-hero h1 em { font-style: normal; color: var(--blue); }
+    .page-hero-lead { font-size: 18px; color: var(--ink-muted); line-height: 1.7; }
+    .hero-divider { width: 48px; height: 3px; background: var(--blue); border-radius: 2px; margin: 28px 0; }
+    .hero-stat-row { display: flex; gap: 48px; margin-top: 40px; }
+    .hero-stat-num { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--blue); line-height: 1; }
+    .hero-stat-label { font-size: 12px; color: var(--ink-muted); margin-top: 6px; }
+    .meaning-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 40px; }
+    .meaning-card .mc-label { font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 24px; }
+    .meaning-card p { font-size: 16px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 16px; }
+    .meaning-card p:last-of-type { margin-bottom: 0; }
+    .meaning-card .mc-bottom { margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--border); }
+    .meaning-card .mc-word { font-family: var(--font-display); font-size: 32px; font-weight: 900; color: var(--blue); line-height: 1; }
+    .meaning-card .mc-def { font-size: 13px; color: var(--ink-muted); margin-top: 6px; }
+
+    .story-section { background: var(--surface); }
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 64px; }
+    .story-body p { font-size: 16px; color: var(--ink-soft); line-height: 1.8; margin-bottom: 20px; }
+    .story-body p:last-child { margin-bottom: 0; }
+    .story-aside { display: flex; flex-direction: column; gap: 24px; }
+    .story-aside-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; }
+    .story-aside-card h4 { font-family: var(--font-display); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+    .story-aside-card p { font-size: 15px; color: var(--ink-muted); line-height: 1.6; }
+
+    .values-section { background: #fff; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 64px; }
+    .value-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 32px; }
+    .value-accent { width: 40px; height: 3px; background: var(--blue); border-radius: 2px; margin-bottom: 20px; }
+    .value-card h3 { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--ink); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.02em; }
+    .value-card p { font-size: 15px; color: var(--ink-muted); line-height: 1.65; }
+
+    .why-section { background: var(--ink); padding: 120px 32px; }
+    .why-inner { max-width: var(--max-w); margin: 0 auto; }
+    .why-inner .section-label { color: rgba(255,255,255,0.4); }
+    .why-inner .section-title { color: #fff; }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 56px; align-items: start; }
+    .why-body p { font-size: 16px; color: rgba(255,255,255,0.65); line-height: 1.8; margin-bottom: 20px; }
+    .why-body p:last-child { margin-bottom: 0; }
+    .why-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(255,255,255,0.08); border-radius: var(--radius); overflow: hidden; }
+    .why-stat { background: rgba(255,255,255,0.04); padding: 32px 28px; }
+    .why-stat-num { font-family: var(--font-display); font-size: 40px; font-weight: 900; color: var(--blue); line-height: 1; margin-bottom: 8px; }
+    .why-stat-label { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
+    .cta-section { background: var(--blue); padding: 120px 32px; text-align: center; }
+    .cta-inner { max-width: 700px; margin: 0 auto; }
+    .cta-section h2 { font-family: var(--font-display); font-size: clamp(32px,4.5vw,56px); font-weight: 900; color: #fff; line-height: 1.05; letter-spacing: 0.02em; text-transform: uppercase; margin-bottom: 20px; }
+    .cta-section p { font-size: 17px; color: rgba(255,255,255,0.75); margin-bottom: 40px; line-height: 1.65; }
+
+    @media (max-width: 900px) {
+      section { padding: 80px 24px; }
+      .page-hero { padding: 130px 24px 60px; }
+      .page-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .story-grid { grid-template-columns: 1fr; gap: 48px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-stat-row { gap: 24px; }
+    }
+    @media (max-width: 600px) {
+      .why-stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Outscales Home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" stroke="#29ABE2" stroke-width="2.2" fill="none"/>
+          <circle cx="16" cy="16" r="9" stroke="#29ABE2" stroke-width="2.2" fill="none"/>
+          <circle cx="16" cy="16" r="4" fill="#29ABE2"/>
+        </svg>
+        <span class="nav-logo-text">Outscales</span>
+      </a>
+      <ul class="nav-links"><li><a href="about.html" class="active">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contact.html">Contact</a></li></ul>
+      <a href="contact.html" class="btn-nav">Book a Demo</a>
+      <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">&times;</button>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="contact.html" class="mobile-cta">Book a Demo</a>
+  </div>
+
+  <section class="page-hero" style="padding:160px 32px 80px;">
+    <div class="page-hero-inner">
+      <div class="reveal">
+        <span class="section-label">Our story</span>
+        <h1>Built for <em>One</em> Market.<br />Obsessed with <em>One</em> Outcome.</h1>
+        <div class="hero-divider"></div>
+        <p class="page-hero-lead">Outscales was founded with a single focus: help Dallas-Fort Worth HVAC businesses stop losing revenue to missed calls. Not ten industries. Not the whole country. DFW HVAC.</p>
+        <div class="hero-stat-row">
+          <div><div class="hero-stat-num">DFW</div><div class="hero-stat-label">Our only market</div></div>
+          <div><div class="hero-stat-num">24/7</div><div class="hero-stat-label">Coverage, always on</div></div>
+          <div><div class="hero-stat-num">2</div><div class="hero-stat-label">Languages. Zero barriers.</div></div>
+        </div>
+      </div>
+      <div class="meaning-card reveal">
+        <div class="mc-label">What Outscales means</div>
+        <p>Every HVAC business owner in DFW is working toward something. More jobs booked. More calls answered. A business that grows without demanding more of their time.</p>
+        <p>Outscales is the bridge between where you are today and where you want to be. We close the gap between the calls coming in and the revenue actually captured.</p>
+        <div class="mc-bottom">
+          <div class="mc-word">Out. Scale.</div>
+          <div class="mc-def">To surpass. To grow beyond. To outperform what was possible before.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story-section">
+    <div class="section-inner">
+      <div class="reveal">
+        <span class="section-label">Why we exist</span>
+        <h2 class="section-title">The problem was hiding in plain sight.</h2>
+      </div>
+      <div class="story-grid">
+        <div class="story-body reveal">
+          <p>HVAC business owners in DFW are some of the hardest-working people in any industry. On the roof at 7am. Under a unit at midnight during a heat wave. Driving from job to job with no time to breathe, let alone answer a ringing phone.</p>
+          <p>But that ringing phone is a job. At $400 to $800 per service call in the DFW market, every missed call is real money walking out the door. One missed call per day adds up to six figures in lost revenue over a year.</p>
+          <p>We built Outscales to fix exactly that. Not with a voicemail system. Not with a call center overseas. With an AI receptionist trained specifically on HVAC service, DFW geography, and bilingual communication in English and Spanish - one that represents your business professionally, books the job, and never drops a call.</p>
+          <p>We serve DFW HVAC exclusively. That focus is a deliberate choice. Every system we build, every capability we develop, every detail we refine is built around one market and one outcome: your revenue captured.</p>
+        </div>
+        <div class="story-aside reveal">
+          <div class="story-aside-card">
+            <h4>Our focus</h4>
+            <p>We operate exclusively in the Dallas-Fort Worth metroplex. Every system, every script, every capability is tailored to DFW HVAC businesses and the customers they serve.</p>
+          </div>
+          <div class="story-aside-card">
+            <h4>Live in 24 hours</h4>
+            <p>We handle the entire setup. You make one call-forwarding change and Outscales is live. Most clients are fully operational within 24 hours of signing on.</p>
+          </div>
+          <div class="story-aside-card">
+            <h4>English and Spanish</h4>
+            <p>Over 40% of the DFW metro speaks Spanish. Outscales handles both languages fluently, without accent barriers, so no caller in your market ever feels turned away.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-section">
+    <div class="section-inner">
+      <div class="reveal">
+        <span class="section-label">What we stand for</span>
+        <h2 class="section-title">Principles that drive everything we do.</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-accent"></div>
+          <h3>Outcome First</h3>
+          <p>We measure our performance by one thing: the revenue our clients capture that they would have otherwise lost. Features are irrelevant. Results are everything. Every decision starts from that principle.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-accent"></div>
+          <h3>Deep Specialization</h3>
+          <p>We are not a generalist AI company. We know the DFW HVAC market - the service call patterns, the peak demand windows, the terminology, and the trust signals that matter to customers in this region.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-accent"></div>
+          <h3>Complete Reliability</h3>
+          <p>An AI receptionist that goes offline at 2am on a 105-degree night is not a product. Reliability is non-negotiable. Outscales runs continuously so your business never has a gap in coverage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-section">
+    <div class="why-inner">
+      <div class="reveal">
+        <span class="section-label">Why Dallas-Fort Worth</span>
+        <h2 class="section-title">This market is different. We treat it that way.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-body reveal">
+          <p>DFW summers are not like other markets. Triple-digit temperatures from June through September create a surge in emergency HVAC calls that no human receptionist can fully absorb. Businesses that answer every call during peak season capture significantly more revenue than those that don't.</p>
+          <p>Add a metro population that is over 40% Spanish-speaking, technicians constantly on-site and unavailable to answer the phone, and a competitive market where a homeowner who hits voicemail simply calls the next company on the list - and the problem becomes clear.</p>
+          <p>Outscales was built for this specific set of conditions. The system is trained on DFW service areas, local demand patterns, and the bilingual communication this market requires. That specialization is what separates us from any general-purpose answering service.</p>
+        </div>
+        <div class="why-stats reveal">
+          <div class="why-stat">
+            <div class="why-stat-num">100+</div>
+            <div class="why-stat-label">Days above 95 degrees in DFW every year</div>
+          </div>
+          <div class="why-stat">
+            <div class="why-stat-num">40%+</div>
+            <div class="why-stat-label">DFW residents who speak Spanish</div>
+          </div>
+          <div class="why-stat">
+            <div class="why-stat-num">$520</div>
+            <div class="why-stat-label">Average HVAC service call value in DFW</div>
+          </div>
+          <div class="why-stat">
+            <div class="why-stat-num">1 in 3</div>
+            <div class="why-stat-label">HVAC calls go unanswered nationally</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-inner reveal">
+      <h2>Ready to stop losing jobs to missed calls?</h2>
+      <p>Book a free demo and see exactly what Outscales does for your business. No commitment, no technical setup required.</p>
+      <a href="contact.html" class="btn-white">Book Your Free Demo</a>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-brand-logo">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="14" stroke="#29ABE2" stroke-width="2.2" fill="none"/>
+              <circle cx="16" cy="16" r="9" stroke="#29ABE2" stroke-width="2.2" fill="none"/>
+              <circle cx="16" cy="16" r="4" fill="#29ABE2"/>
+            </svg>
+            <span class="footer-logo-text">Outscales</span>
+          </a>
+          <p>The AI receptionist built exclusively for Dallas-Fort Worth HVAC companies. Every call answered. Every job captured.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:wajih@outscales.com">wajih@outscales.com</a></li>
+            <li><a href="tel:+14692695880">+1 (469) 269-5880</a></li>
+            <li>Dallas-Fort Worth, TX</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-legal">&copy; 2026 Outscales. All rights reserved. Outscales provides AI-powered receptionist services to HVAC businesses in the Dallas-Fort Worth metropolitan area.<br />
+        SMS opt-in data and consent are never shared with third parties.
+        <a href="privacy.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Privacy Policy</a> &nbsp;
+        <a href="terms.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Terms of Service</a></p>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navEl = document.querySelector('nav');
+    window.addEventListener('scroll', () => { navEl.style.boxShadow = window.scrollY > 20 ? '0 2px 24px rgba(10,15,30,0.06)' : 'none'; });
+    const hamburger = document.querySelector('.nav-hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => { mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden'; });
+      mobileClose.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; });
+      mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }));
+    }
+    const reveals = document.querySelectorAll('.reveal');
+    if (reveals.length) {
+      const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(el => obs.observe(el));
+    }
+  </script>
+</body>
+</html>

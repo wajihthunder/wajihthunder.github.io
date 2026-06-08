@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Outscales | Book a Free Demo</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MCAxMDAiIGZpbGw9Im5vbmUiPgogIDxwYXRoIGQ9Ik0gMTggNjggQSA0MCA0MCAwIDEgMSA3MiAxOCIgc3Ryb2tlPSIjMjlBQkUyIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0gNjUgMTAgTCA4MCAxMCBMIDgwIDI1IiBzdHJva2U9IiMyOUFCRTIiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPHBhdGggZD0iTSAzMiA3OCBBIDIyIDIyIDAgMSAxIDY4IDc4IiBzdHJva2U9IiMyOUFCRTIiIHN0cm9rZS13aWR0aD0iNy41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI4IiBmaWxsPSIjMjlBQkUyIi8+CiAgPGxpbmUgeDE9IjMyIiB5MT0iNzgiIHgyPSI1MCIgeTI9Ijk2IiBzdHJva2U9IiMyOUFCRTIiIHN0cm9rZS13aWR0aD0iNy41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iNjgiIHkxPSI3OCIgeDI9IjUwIiB5Mj0iOTYiIHN0cm9rZT0iIzI5QUJFMiIgc3Ryb2tlLXdpZHRoPSI3LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4=" />
   <meta name="description" content="Book a free 30-minute demo with Outscales. See exactly what our AI receptionist does for your DFW HVAC business." />
   <meta property="og:title" content="Contact Outscales | Book a Free Demo" />
   <meta property="og:url" content="https://outscales.com/contact.html" />
@@ -52,8 +53,10 @@
     .footer-links a { font-size: 12px; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: rgba(255,255,255,0.7); }
     @media (max-width: 900px) {
+      body { overflow-x: hidden; }
       .nav-links, .btn-nav { display: none; }
       .nav-hamburger { display: flex; }
+      .nav-inner { padding: 0 20px; }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
     }
     @media (max-width: 600px) {
@@ -72,7 +75,16 @@
     .btn-nav:hover { background: var(--blue-dark); }
     .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
     .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; }
-    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--surface-card); z-index: 200; padding: 88px 32px 48px; flex-direction: column; gap: 8px; }
+    .mobile-menu { display: flex; flex-direction: column; position: fixed; top: 0; right: -100%; width: min(320px, 85vw); height: 100%; background: #fff; z-index: 300; padding: 80px 32px 48px; gap: 0; transition: right 0.3s cubic-bezier(0.4,0,0.2,1); box-shadow: -8px 0 40px rgba(10,15,30,0.12); overflow-y: auto; }
+    .mobile-menu.open { right: 0; }
+    .mobile-close { position: absolute; top: 20px; right: 20px; background: none; border: none; cursor: pointer; color: var(--ink); padding: 8px; border-radius: 8px; }
+    .mobile-close:hover { background: var(--surface); }
+    .mobile-menu a { font-family: var(--font-display); font-size: 24px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink); text-decoration: none; padding: 16px 0; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+    .mobile-menu a:hover { color: var(--blue); }
+    .mobile-menu .mobile-cta-link { margin-top: 24px; background: var(--blue); color: #fff; text-align: center; border-radius: 10px; padding: 16px; border-bottom: none; }
+    .mobile-menu .mobile-cta-link:hover { background: var(--blue-dark); color: #fff; }
+    .mobile-overlay { display: none; position: fixed; inset: 0; background: rgba(10,15,30,0.4); z-index: 250; backdrop-filter: blur(2px); }
+    .mobile-overlay.open { display: block; }
     .mobile-menu.open { display: flex; }
     .mobile-menu a { font-family: var(--font-display); font-size: 28px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink); text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--border); }
     .mobile-menu-close { position: absolute; top: 20px; right: 24px; background: none; border: none; cursor: pointer; font-size: 28px; color: var(--ink); line-height: 1; padding: 8px; }
@@ -143,18 +155,14 @@
   <nav>
     <div class="nav-inner">
       <a href="index.html" class="nav-logo" aria-label="Outscales Home">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="16" cy="16" r="14" stroke="#29ABE2" stroke-width="2.2" fill="none"/>
-          <circle cx="16" cy="16" r="9" stroke="#29ABE2" stroke-width="2.2" fill="none"/>
-          <circle cx="16" cy="16" r="4" fill="#29ABE2"/>
-        </svg>
+        <img src="outscales-mark-dark.png" alt="Outscales" class="nav-logo-mark" style="height:34px;width:auto;display:block;" />
         <span class="nav-logo-text">Outscales</span>
       </a>
       <ul class="nav-links"><li><a href="about.html">About</a></li>
 <li><a href="services.html">Services</a></li>
 <li><a href="contact.html" class="active">Contact</a></li></ul>
       <a href="contact.html" class="btn-nav">Book a Demo</a>
-      <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation">
@@ -212,6 +220,7 @@
 
       <div class="form-wrap reveal">
         <div id="formContent">
+          <form id="demoForm" action="https://formspree.io/f/mqeokawr" method="POST" novalidate>
           <div class="form-title">Book Your Free Demo</div>
           <div class="form-subtitle">We will reach out within one business day to schedule your walkthrough.</div>
 
@@ -288,8 +297,9 @@
             </div>
           </div>
 
-          <button type="button" class="btn-submit" id="submitBtn" onclick="handleSubmit()">Book My Free Demo</button>
+          <button type="submit" class="btn-submit" id="submitBtn">Book My Free Demo</button>
           <p class="form-note">We respond within one business day. No spam, ever.</p>
+          </form>
         </div>
 
         <div class="form-success" id="formSuccess">
@@ -309,11 +319,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="index.html" class="footer-brand-logo">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <circle cx="16" cy="16" r="14" stroke="#29ABE2" stroke-width="2.2" fill="none"/>
-              <circle cx="16" cy="16" r="9" stroke="#29ABE2" stroke-width="2.2" fill="none"/>
-              <circle cx="16" cy="16" r="4" fill="#29ABE2"/>
-            </svg>
+            <img src="outscales-mark-light.png" alt="Outscales" class="footer-logo-mark" style="height:30px;width:auto;display:block;" />
             <span class="footer-logo-text">Outscales</span>
           </a>
           <p>The AI receptionist built exclusively for Dallas-Fort Worth HVAC companies. Every call answered. Every job captured.</p>
@@ -356,35 +362,63 @@
   </footer>
 
   <script>
-    function handleSubmit() {
-      const terms = document.getElementById('termsConsent');
-      const firstName = document.getElementById('firstName').value.trim();
-      const lastName = document.getElementById('lastName').value.trim();
-      const business = document.getElementById('businessName').value.trim();
-      const email = document.getElementById('email').value.trim();
-      if (!firstName || !lastName || !business || !email) {
-        alert('Please fill in all required fields.');
-        return;
-      }
-      if (!terms.checked) {
-        alert('Please agree to the Terms of Service and Privacy Policy to continue.');
-        return;
-      }
-      document.getElementById('formContent').style.display = 'none';
-      document.getElementById('formSuccess').classList.add('show');
+    const demoForm = document.getElementById('demoForm');
+    if (demoForm) {
+      demoForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const terms = document.getElementById('termsConsent');
+        const firstName = document.getElementById('firstName').value.trim();
+        const lastName = document.getElementById('lastName').value.trim();
+        const business = document.getElementById('businessName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        if (!firstName || !lastName || !business || !email) {
+          alert('Please fill in all required fields.');
+          return;
+        }
+        if (!terms.checked) {
+          alert('Please agree to the Terms of Service and Privacy Policy to continue.');
+          return;
+        }
+        const btn = document.getElementById('submitBtn');
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+        try {
+          const response = await fetch(demoForm.action, {
+            method: 'POST',
+            body: new FormData(demoForm),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (response.ok) {
+            document.getElementById('formContent').style.display = 'none';
+            document.getElementById('formSuccess').classList.add('show');
+          } else {
+            btn.textContent = 'Book My Free Demo';
+            btn.disabled = false;
+            alert('Something went wrong. Please email us directly at wajih@outscales.com');
+          }
+        } catch(err) {
+          btn.textContent = 'Book My Free Demo';
+          btn.disabled = false;
+          alert('Network error. Please email us directly at wajih@outscales.com');
+        }
+      });
     }
   </script>
 
   <script>
     const navEl = document.querySelector('nav');
     window.addEventListener('scroll', () => { navEl.style.boxShadow = window.scrollY > 20 ? '0 2px 24px rgba(10,15,30,0.06)' : 'none'; });
-    const hamburger = document.querySelector('.nav-hamburger');
+    const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileClose = document.getElementById('mobileClose');
+    const overlay = document.getElementById('mobileOverlay');
+    function openMenu() { mobileMenu.classList.add('open'); if(overlay) overlay.classList.add('open'); document.body.style.overflow = 'hidden'; if(hamburger) hamburger.setAttribute('aria-expanded','true'); }
+    function closeMenu() { mobileMenu.classList.remove('open'); if(overlay) overlay.classList.remove('open'); document.body.style.overflow = ''; if(hamburger) hamburger.setAttribute('aria-expanded','false'); }
     if (hamburger) {
-      hamburger.addEventListener('click', () => { mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden'; });
-      mobileClose.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; });
-      mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }));
+      hamburger.addEventListener('click', openMenu);
+      if(mobileClose) mobileClose.addEventListener('click', closeMenu);
+      if(overlay) overlay.addEventListener('click', closeMenu);
+      if(mobileMenu) mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
     }
     const reveals = document.querySelectorAll('.reveal');
     if (reveals.length) {

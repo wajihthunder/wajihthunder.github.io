@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-src https://www.loom.com" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Outscales | Book a Free Demo</title>
+  <title>Outscales</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MCAxMDAiIGZpbGw9Im5vbmUiPgogIDxwYXRoIGQ9Ik0gMTggNjggQSA0MCA0MCAwIDEgMSA3MiAxOCIgc3Ryb2tlPSIjMjlBQkUyIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0gNjUgMTAgTCA4MCAxMCBMIDgwIDI1IiBzdHJva2U9IiMyOUFCRTIiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPHBhdGggZD0iTSAzMiA3OCBBIDIyIDIyIDAgMSAxIDY4IDc4IiBzdHJva2U9IiMyOUFCRTIiIHN0cm9rZS13aWR0aD0iNy41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI4IiBmaWxsPSIjMjlBQkUyIi8+CiAgPGxpbmUgeDE9IjMyIiB5MT0iNzgiIHgyPSI1MCIgeTI9Ijk2IiBzdHJva2U9IiMyOUFCRTIiIHN0cm9rZS13aWR0aD0iNy41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iNjgiIHkxPSI3OCIgeDI9IjUwIiB5Mj0iOTYiIHN0cm9rZT0iIzI5QUJFMiIgc3Ryb2tlLXdpZHRoPSI3LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4=" />
   <meta name="description" content="Book a free 30-minute demo with Outscales. See exactly what our AI receptionist does for your DFW HVAC business." />
   <meta property="og:title" content="Contact Outscales | Book a Free Demo" />
@@ -221,6 +223,7 @@
       <div class="form-wrap reveal">
         <div id="formContent">
           <form id="demoForm" action="https://formspree.io/f/mqeokawr" method="POST" novalidate>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
           <div class="form-title">Book Your Free Demo</div>
           <div class="form-subtitle">We will reach out within one business day to schedule your walkthrough.</div>
 
@@ -392,9 +395,11 @@
             document.getElementById('formContent').style.display = 'none';
             document.getElementById('formSuccess').classList.add('show');
           } else {
+            let msg = 'Something went wrong. Please email us directly at wajih@outscales.com';
+            try { const data = await response.json(); if (data && data.errors && data.errors.length) { msg = data.errors.map(function(x){ return x.message; }).join(' '); } } catch (e) {}
             btn.textContent = 'Book My Free Demo';
             btn.disabled = false;
-            alert('Something went wrong. Please email us directly at wajih@outscales.com');
+            alert(msg);
           }
         } catch(err) {
           btn.textContent = 'Book My Free Demo';
